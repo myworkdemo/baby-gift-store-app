@@ -1,0 +1,43 @@
+
+server:
+    servlet:
+        context-path: /baby-gift-store/    
+spring:
+    datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5Dialect
+        hibernate:
+            ddl-auto: update
+        show-sql: true
+    servlet:
+        multipart:
+            enabled: true
+            max-file-size: 10MB
+            max-request-size: 10MB
+    profiles:
+      active: dev #current application running environment
+      
+---
+# local develompment environment
+spring:
+  profiles: dev
+  datasource:
+    password: root
+    url: jdbc:mysql://localhost:3306/babygiftstore_db?max_allowed_packet=25000
+    username: root 
+server:
+  port: 9090
+    
+---
+# production live environment
+spring:
+  profiles: prod
+  datasource:
+    password: root2021
+    url: jdbc:mysql://voffice-db.cklyua0vjw43.ap-south-1.rds.amazonaws.com:3306/voffice?max_allowed_packet=25000
+    username: root 
+server:
+  port: 5000  
+
+
