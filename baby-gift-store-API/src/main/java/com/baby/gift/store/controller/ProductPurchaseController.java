@@ -12,6 +12,7 @@ public class ProductPurchaseController {
 	
 	@GetMapping(value = "/msg")
 	public String sayHello() {
+		System.out.println("sayHello()...");
 		return "Hello User!";
 	}
 

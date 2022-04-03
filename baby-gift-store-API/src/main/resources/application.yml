@@ -1,7 +1,7 @@
 
 server:
     servlet:
-        context-path: /baby-gift-store/    
+        context-path: /baby-gift-store/api/    
 spring:
     datasource:
         driver-class-name: com.mysql.jdbc.Driver
