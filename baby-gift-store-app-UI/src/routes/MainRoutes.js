@@ -3,6 +3,9 @@ import { lazy } from 'react';
 // project imports
 import MainLayout from 'layout/MainLayout';
 import Loadable from 'ui-component/Loadable';
+import PurchaseProduct from 'custom-component/purchase/PurchaseProduct';
+import AllPurchaseProductRecords from '../custom-component/purchase/AllPurchaseProductRecords';
+import AllSaleProductRecords from 'custom-component/sale/AllSaleProductRecords';
 
 // dashboard routing
 const DashboardDefault = Loadable(lazy(() => import('views/dashboard/Default')));
@@ -14,8 +17,8 @@ const UtilsShadow = Loadable(lazy(() => import('views/utilities/Shadow')));
 const UtilsMaterialIcons = Loadable(lazy(() => import('views/utilities/MaterialIcons')));
 const UtilsTablerIcons = Loadable(lazy(() => import('views/utilities/TablerIcons')));
 
-// sample page routing
-const SamplePage = Loadable(lazy(() => import('views/sample-page')));
+// sale product routing
+const SaleProduct = Loadable(lazy(() => import('custom-component/sale/SaleProduct')));
 
 // login option 3 routing
 const AuthLogin3 = Loadable(lazy(() => import('views/pages/authentication/authentication3/Login3')));
@@ -55,8 +58,20 @@ const MainRoutes = {
             element: <UtilsMaterialIcons />
         },
         {
-            path: '/sample-page',
-            element: <SamplePage />
+            path: '/purchase-product/add',
+            element: <PurchaseProduct />
+        },
+        {
+            path: '/purchase-product/list',
+            element: <AllPurchaseProductRecords />
+        },
+        {
+            path: '/sale-product/add',
+            element: <SaleProduct />
+        },
+        {
+            path: '/sale-product/list',
+            element: <AllSaleProductRecords />
         }
     ]
 };

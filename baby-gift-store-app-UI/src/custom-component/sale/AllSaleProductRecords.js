@@ -187,7 +187,7 @@ const AllSaleProductRecords = ({ ...others }) => {
 
     return (
         <>
-            <MainCard title="All Purchase Product Records">
+            <MainCard title="All Sale Product Records">
                 <Paper elevation={3}>
                     <CustomDataTable rows={purchaseList} columns={columns} />
                 </Paper>

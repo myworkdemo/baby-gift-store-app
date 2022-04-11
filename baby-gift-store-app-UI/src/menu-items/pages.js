@@ -1,39 +1,61 @@
 // assets
-import { IconKey } from '@tabler/icons';
+import { IconKey, IconCirclePlus, IconCaretRight } from '@tabler/icons';
 
 // constant
 const icons = {
-    IconKey
+    IconKey,
+    IconCirclePlus,
+    IconCaretRight
 };
 
 // ==============================|| EXTRA PAGES MENU ITEMS ||============================== //
 
 const pages = {
-    id: 'pages',
-    title: 'Pages',
-    caption: 'Pages Caption',
     type: 'group',
     children: [
         {
-            id: 'authentication',
-            title: 'Authentication',
+            id: 'add-stock',
+            title: 'Purchase',
             type: 'collapse',
-            icon: icons.IconKey,
+            icon: icons.IconCirclePlus,
 
             children: [
                 {
-                    id: 'login3',
-                    title: 'Login',
+                    id: 'add',
+                    title: 'Add Purchase',
                     type: 'item',
-                    url: '/pages/login/login3',
-                    target: true
+                    icon: icons.IconCaretRight,
+                    url: '/purchase-product/add'
                 },
                 {
-                    id: 'register3',
-                    title: 'Register',
+                    id: 'list',
+                    title: 'Purchase Records',
                     type: 'item',
-                    url: '/pages/register/register3',
-                    target: true
+                    icon: icons.IconCaretRight,
+                    url: '/purchase-product/list'
+                }
+            ]
+        },
+        {
+            id: 'sale-stock',
+            title: 'Sale',
+            type: 'collapse',
+            icon: icons.IconCirclePlus,
+
+            children: [
+                {
+                    id: 'sale',
+                    title: 'Add Sale',
+                    type: 'item',
+                    icon: icons.IconCaretRight,
+                    url: '/sale-product/add'
+                },
+                {
+                    id: 'list',
+                    title: 'Sale Records',
+                    type: 'item',
+                    icon: icons.IconCaretRight,
+                    url: '/sale-product/list'
                 }
             ]
         }
